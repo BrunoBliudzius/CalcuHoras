@@ -1,0 +1,29 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.card {
+  border-radius: 12px;
+}
+
+.form-container {
+  background-color: #aaa9a9; /* mais escuro que o card */
+  padding: 20px;
+  border-radius: 30px;
+  border: 1px solid #2a2a2a;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #413f3f;
+  font-weight: bold;
+}

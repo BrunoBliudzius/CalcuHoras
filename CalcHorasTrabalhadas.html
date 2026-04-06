@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Controle de Horas</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="CalcHorasTrabalhadas.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <div class="card shadow p-4 form-container">
+        <h3 class="mb-4">Controle de Horas Trabalhadas</h3>
+
+        <!-- Formulário -->
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label">Data</label>
+            <input type="date" id="data" class="form-control" />
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Horas Trabalhadas</label>
+            <input
+              type="number"
+              id="horas"
+              class="form-control"
+              placeholder="Ex: 8"
+            />
+          </div>
+
+          <div class="col-md-4 d-flex align-items-end">
+            <button class="btn btn-primary w-100" onclick="adicionar()">
+              Adicionar
+            </button>
+          </div>
+        </div>
+
+        <!-- Tabela -->
+        <div class="mt-4">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Horas</th>
+              </tr>
+            </thead>
+            <tbody id="tabelaHoras"></tbody>
+          </table>
+        </div>
+
+        <!-- Saldo -->
+        <div class="mt-3">
+          <h5 id="saldo"></h5>
+          <h5 id="h5Compara"></h5>
+        </div>
+        <button class="btn btn-danger w-100" onclick="ResetarMes()">
+          Resetar Mes
+        </button>
+      </div>
+    </div>
+
+    <script src="CalcHorasTrabalhadas.js"></script>
+  </body>
+</html>
