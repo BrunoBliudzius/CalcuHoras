@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Controle de Horas</title>
+    <title>Controle de Placas</title>
 
     <link rel="icon" href="/faviconCalchHoras.png" type="image/x-icon" />
 
@@ -18,35 +18,25 @@
       rel="stylesheet"
     />
 
-    <link href="CalcHorasTrabalhadas.css" rel="stylesheet" />
+    <link href="/placasRes.css" rel="stylesheet" />
   </head>
 
   <body>
     <div class="container mt-5">
       <div class="card shadow p-4 form-container">
-        <h3 class="mb-4">Controle de Horas Trabalhadas</h3>
+        <h3 class="mb-4">Controle Placas</h3>
         <a
-          href="/placasRes.html"
+          href="/CalcHorasTrabalhadas.html"
           class="btn btn-warning w-100 text-decoration-none"
         >
-          Placas
+          Horas Extras
         </a>
 
         <!-- Formulário -->
         <div class="row g-3">
           <div class="col-md-4">
-            <label class="form-label">Data</label>
-            <input type="date" id="data" class="form-control" />
-          </div>
-
-          <div class="col-md-4">
-            <label class="form-label">Horas Trabalhadas</label>
-            <input
-              type="number"
-              id="horas"
-              class="form-control"
-              placeholder="Ex: 8"
-            />
+            <label class="form-label">Placa</label>
+            <input type="text" id="placa" class="form-control" />
           </div>
 
           <div class="col-md-4 d-flex align-items-end">
@@ -62,24 +52,19 @@
             <thead>
               <tr>
                 <th>Data</th>
-                <th>Horas</th>
+                <th>Placa</th>
               </tr>
             </thead>
-            <tbody id="tabelaHoras"></tbody>
+            <tbody id="tabelaPlacas"></tbody>
           </table>
         </div>
-
-        <!-- Saldo -->
-        <div class="mt-3">
-          <h5 id="saldo"></h5>
-          <h5 id="h5Compara"></h5>
-        </div>
+        <h5 id="saldo">Saldo:</h5>
         <button class="btn btn-danger w-100" onclick="ResetarMes()">
           Resetar Mes
         </button>
       </div>
     </div>
 
-    <script src="CalcHorasTrabalhadas.js"></script>
+    <script src="/placasRes.js"></script>
   </body>
 </html>
